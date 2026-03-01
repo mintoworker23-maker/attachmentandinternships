@@ -60,6 +60,16 @@ const trackToLabel: Record<ListingTrack, string> = {
   "graduate-trainee": "Graduate Trainees",
 };
 
+function decodeHtmlEntities(value?: string) {
+  if (!value) return "";
+  return value
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'");
+}
+
 async function getJobs() {
   const filePath = path.join(process.cwd(), "public", "data", "jobs.json");
   const file = await fs.readFile(filePath, "utf8");
@@ -203,7 +213,11 @@ export default async function JobPage({ params }: JobPageProps) {
               {job.rolePurpose ??
                 `${job.title} will provide strategic and operational support to ${job.company}, helping improve delivery, reporting, and decision quality across core workflows.`}
             </p>
-            {job.overview && <p className="mt-3 text-sm leading-7 text-slate-700">{job.overview}</p>}
+            {job.overview && (
+              <div className="mt-3 text-sm leading-7 text-slate-700">
+                <div dangerouslySetInnerHTML={{ __html: decodeHtmlEntities(job.overview) }} />
+              </div>
+            )}
 
             <h3 className="mt-8 text-xl font-semibold text-slate-900">Key Responsibilities</h3>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
