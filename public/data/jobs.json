@@ -1,0 +1,92 @@
+[
+  {
+    "id": "jp-010",
+    "title": "Corporate Finance Analyst",
+    "company": "Jambojet",
+    "location": "Nairobi, Kenya",
+    "type": "FullTime",
+    "postedDate": "2026-03-01",
+    "track": "attachment"
+  },
+  {
+    "id": "jp-001",
+    "title": "Communications Assistant",
+    "company": "NovaStack",
+    "location": "Nairobi, Kenya",
+    "type": "Full-time",
+    "postedDate": "2026-02-28",
+    "track": "attachment"
+  },
+  {
+    "id": "jp-002",
+    "title": "Operations Attachment",
+    "company": "Orbit Labs",
+    "location": "Kigali, Rwanda",
+    "type": "On-site",
+    "postedDate": "2026-02-26",
+    "track": "attachment"
+  },
+  {
+    "id": "jp-003",
+    "title": "Finance Attachment",
+    "company": "InsightEdge",
+    "location": "Kampala, Uganda",
+    "type": "Hybrid",
+    "postedDate": "2026-02-23",
+    "track": "attachment"
+  },
+  {
+    "id": "jp-004",
+    "title": "Software Engineering Intern",
+    "company": "CloudMesh",
+    "location": "Lagos, Nigeria",
+    "type": "Internship",
+    "postedDate": "2026-02-27",
+    "track": "internship"
+  },
+  {
+    "id": "jp-005",
+    "title": "DevOps Intern",
+    "company": "ScaleHive",
+    "location": "Remote",
+    "type": "Internship",
+    "postedDate": "2026-02-25",
+    "track": "internship"
+  },
+  {
+    "id": "jp-006",
+    "title": "Data Analyst Intern",
+    "company": "BrightCore",
+    "location": "Mombasa, Kenya",
+    "type": "Internship",
+    "postedDate": "2026-02-22",
+    "track": "internship"
+  },
+  {
+    "id": "jp-007",
+    "title": "Graduate Software Trainee",
+    "company": "PixelMint",
+    "location": "Remote",
+    "type": "Graduate Program",
+    "postedDate": "2026-02-28",
+    "track": "graduate-trainee"
+  },
+  {
+    "id": "jp-008",
+    "title": "Graduate Product Trainee",
+    "company": "Aster Works",
+    "location": "Nairobi, Kenya",
+    "type": "Graduate Program",
+    "postedDate": "2026-02-24",
+    "track": "graduate-trainee"
+  },
+  {
+    "id": "jp-009",
+    "title": "Graduate Business Analyst",
+    "company": "Northstar Systems",
+    "location": "Dar es Salaam, Tanzania",
+    "type": "Graduate Program",
+    "postedDate": "2026-02-21",
+    "track": "graduate-trainee"
+  }
+]
