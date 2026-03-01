@@ -1,0 +1,88 @@
+{
+  "sourceUrl": "https://campusbiz.co.ke/careers?feed=job_feed&job_types=attachment&search_location&job_categories&search_keywords",
+  "scrapedAt": "2026-03-01T21:19:22.548Z",
+  "sourceType": "rss",
+  "total": 10,
+  "listings": [
+    {
+      "title": "Industrial Attachment Opportunities",
+      "url": "https://campusbiz.co.ke/careers/vacancy/866477-kenttec-industrial-attachment-opportunities/",
+      "trackGuess": "attachment",
+      "source": "campusbiz.co.ke",
+      "publishedAt": "Wed, 25 Feb 2026 20:37:46 +0000",
+      "summary": "Kenya Tsetse and Trypanosomiasis Eradication Council (KENTTEC) is a state corporation mandated to coordinate all Tsetse and Trypanosomiasis eradication activities in Kenya. INDUSTRIAL ATTACHMENT OPPORTUNITIES..."
+    },
+    {
+      "title": "Organic Agronomist/Agro-ecologist Attaché",
+      "url": "https://campusbiz.co.ke/careers/vacancy/857980-city-shamba-attachment-organic-agronomist-agro-ecologist/",
+      "trackGuess": "attachment",
+      "source": "campusbiz.co.ke",
+      "publishedAt": "Wed, 25 Feb 2026 13:14:56 +0000",
+      "summary": "Are you passionate about sustainable agriculture and eager to apply your classroom knowledge in the real world? We're offering a dynamic field attachment designed to..."
+    },
+    {
+      "title": "Communication Intern",
+      "url": "https://campusbiz.co.ke/careers/vacancy/865054-tech-kidz-africa-mombasa-communication-intern/",
+      "trackGuess": "internship",
+      "source": "campusbiz.co.ke",
+      "publishedAt": "Mon, 23 Feb 2026 11:55:45 +0000",
+      "summary": "Tech Kidz Africa is an edtech Academy, innovation hub and social enterprise that nurtures the spirit of innovativeness through empowering learners. Communication Intern Who We’re..."
+    },
+    {
+      "title": "Industrial Attachment",
+      "url": "https://campusbiz.co.ke/careers/vacancy/865046-tech-kidz-africa-mombasa-industrial-attachment/",
+      "trackGuess": "attachment",
+      "source": "campusbiz.co.ke",
+      "publishedAt": "Mon, 23 Feb 2026 11:49:08 +0000",
+      "summary": "Tech Kidz Africa is an edtech Academy, innovation hub and social enterprise that nurtures the spirit of innovativeness through empowering learners. Industrial Attachment For Stem..."
+    },
+    {
+      "title": "Industrial Attachment Programme - May to July 2026",
+      "url": "https://campusbiz.co.ke/careers/vacancy/864215-kra-industrial-attachment-programme-may-to-july-2026/",
+      "trackGuess": "attachment",
+      "source": "campusbiz.co.ke",
+      "publishedAt": "Fri, 20 Feb 2026 16:12:17 +0000",
+      "summary": "Launch your career with KRA's Industrial Attachment Programme! Are you a driven 3rd, 4th, or final year undergraduate or final year diploma student? Gain invaluable..."
+    },
+    {
+      "title": "Public Relations Intern",
+      "url": "https://campusbiz.co.ke/careers/vacancy/864027-mwananchi-credit-nairobi-public-relations-intern/",
+      "trackGuess": "internship",
+      "source": "campusbiz.co.ke",
+      "publishedAt": "Fri, 20 Feb 2026 11:19:56 +0000",
+      "summary": "Mwananchi Credit Limited is Kenya’s leading provider of Logbook Loans and other Secured Emergency Loans. Job Title: Public Relations Intern Vacancies: 1 Branch(s): Eco Bank..."
+    },
+    {
+      "title": "Attachment Opportunities",
+      "url": "https://campusbiz.co.ke/careers/vacancy/857279-clean-cookstoves-association-of-kenya-attachment-opportunities/",
+      "trackGuess": "attachment",
+      "source": "campusbiz.co.ke",
+      "publishedAt": "Wed, 28 Jan 2026 16:10:23 +0000",
+      "summary": "The Clean Cookstoves Association of Kenya (CCAK) is a private, not for profit, business membership organization (BMO) with members from both private and public sectors...."
+    },
+    {
+      "title": "Attachment Opportunities",
+      "url": "https://campusbiz.co.ke/careers/vacancy/850166-hihome-kenya-technology-attachment-opportunities-nairobi/",
+      "trackGuess": "attachment",
+      "source": "campusbiz.co.ke",
+      "publishedAt": "Tue, 06 Jan 2026 13:02:24 +0000",
+      "summary": "At HiHome Kenya Technology Ltd, We bring the world’s top electronics and appliance brands to your home, offering trusted quality and innovative solutions that enhance..."
+    },
+    {
+      "title": "2026 Primary Teacher Internship",
+      "url": "https://campusbiz.co.ke/careers/vacancy/820836-primary-teacher-internship-nova-pioneer-tatu-international/",
+      "trackGuess": "internship",
+      "source": "campusbiz.co.ke",
+      "publishedAt": "Tue, 06 Jan 2026 12:22:33 +0000",
+      "summary": "Nova Pioneer Tatu International is looking for superstar educators who are currently enrolled or have recently graduated from a teaching college or university and would..."
+    },
+    {
+      "title": "Software Developer Attachment",
+      "url": "https://campusbiz.co.ke/careers/vacancy/846700-britam-software-developer-attachment-nairobi/",
+      "trackGuess": "attachment",
+      "source": "campusbiz.co.ke",
+      "publishedAt": "Tue, 30 Dec 2025 16:25:42 +0000",
+      "summary": "Join Britam as a Software Developer Attaché for a pivotal 3-month opportunity based in Nairobi, Kenya. This dynamic entry-level role challenges bright, aspiring technologists to..."
+    }
+  ]
+}

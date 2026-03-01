@@ -4,6 +4,9 @@ import Footer from "@/components/Footer";
 import FloatingSocialLinks from "@/components/FloatingSocialLinks";
 import Navbar from "@/components/Navbar";
 import { FormEvent, useEffect, useMemo, useState } from "react";
+import { signInWithEmailAndPassword, onAuthStateChanged, signOut, User } from "firebase/auth";
+import { auth } from "@/lib/firebase"; // our Firebase initialization
+
 
 type ListingTrack = "attachment" | "internship" | "graduate-trainee";
 
@@ -164,6 +167,9 @@ function createJobFromForm(form: JobFormState): JobListing {
 }
 
 export default function AdminPage() {
+  const [user, setUser] = useState<User | null>(null);
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
   const [form, setForm] = useState<JobFormState>(initialForm);
   const [existingJobs, setExistingJobs] = useState<JobListing[]>([]);
   const [newJobs, setNewJobs] = useState<JobListing[]>([]);
@@ -186,6 +192,15 @@ export default function AdminPage() {
     loadJobs();
   }, []);
 
+  // listen for auth state changes
+  useEffect(() => {
+    if (!auth) return;
+    const unsubscribe = onAuthStateChanged(auth, (u) => {
+      setUser(u);
+    });
+    return unsubscribe;
+  }, []);
+
   const exportJobs = useMemo(() => {
     return includeExisting ? [...newJobs, ...existingJobs] : newJobs;
   }, [existingJobs, includeExisting, newJobs]);
@@ -193,6 +208,25 @@ export default function AdminPage() {
   const exportJson = useMemo(() => {
     return `${JSON.stringify(exportJobs, null, 2)}\n`;
   }, [exportJobs]);
+
+  // authentication helpers for email/password
+  const loginWithEmail = async (event: FormEvent) => {
+    event.preventDefault();
+    setError(null);
+    if (!auth) return;
+    try {
+      await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
+    } catch (err: any) {
+      console.error("Login failed", err);
+      setError(err.message || "Authentication failed.");
+    }
+  };
+
+  const logout = async () => {
+    if (!auth) return;
+    await signOut(auth);
+  };
+
 
   const handleChange =
     (field: keyof JobFormState) =>
@@ -237,6 +271,44 @@ export default function AdminPage() {
     window.setTimeout(() => setCopied(false), 1800);
   };
 
+  // if not authenticated show an email/password login screen
+  if (!user) {
+    return (
+      <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 text-slate-900">
+        <h1 className="mb-4 text-3xl font-bold text-slate-900">Admin Login</h1>
+        <form onSubmit={loginWithEmail} className="w-full max-w-sm">
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700">Email</label>
+            <input
+              type="email"
+              value={loginEmail}
+              onChange={(e) => setLoginEmail(e.target.value)}
+              className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-slate-900"
+              required
+            />
+          </div>
+          <div className="mb-6">
+            <label className="block text-sm font-medium text-gray-700">Password</label>
+            <input
+              type="password"
+              value={loginPassword}
+              onChange={(e) => setLoginPassword(e.target.value)}
+              className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-slate-900"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            className="w-full rounded-full bg-blue-500 px-6 py-3 text-white transition hover:bg-blue-600"
+          >
+            Sign in
+          </button>
+        </form>
+        {error && <p className="mt-4 text-red-600">{error}</p>}
+      </div>
+    );
+  }
+
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#e7edf8] via-[#edf3fb] to-[#dce7f6] px-3 pb-4 pt-20 sm:px-4">
       <div className="pointer-events-none absolute -left-16 top-[-9rem] h-72 w-72 rounded-full bg-sky-400/35 blur-3xl" />
@@ -248,9 +320,17 @@ export default function AdminPage() {
         <Navbar />
 
         <main className="mx-auto mt-10 w-full max-w-7xl rounded-[2rem] border border-slate-300 bg-white p-6 shadow-[0_20px_50px_-35px_rgba(2,6,23,0.35)] sm:p-8">
-          <div className="rounded-xl border border-slate-600/80 bg-gradient-to-r from-slate-950 to-slate-800 px-4 py-3">
-            <h1 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">Jobs Admin</h1>
-            <p className="mt-1 text-sm text-slate-300">Fill fields, add jobs, then export a ready-to-use `jobs.json`.</p>
+          <div className="rounded-xl border border-slate-600/80 bg-gradient-to-r from-slate-950 to-slate-800 px-4 py-3 flex items-center justify-between">
+            <div>
+              <h1 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">Jobs Admin</h1>
+              <p className="mt-1 text-sm text-slate-300">Fill fields, add jobs, then export a ready-to-use `jobs.json`.</p>
+            </div>
+            <button
+              onClick={logout}
+              className="rounded-full bg-red-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-600"
+            >
+              Sign out
+            </button>
           </div>
 
           {error && <p className="mt-4 rounded-lg border border-red-300 bg-red-50 p-3 text-sm text-red-700">{error}</p>}

@@ -137,9 +137,20 @@ export default async function JobPage({ params }: JobPageProps) {
               <span className="text-slate-900">{job.category ?? "Job Details"}</span>
             </nav>
 
-            <h1 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              {job.title} at {job.company}
-            </h1>
+            {job.application?.applyUrl ? (
+              <a
+                href={job.application.applyUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block mt-4 text-3xl font-bold tracking-tight text-sky-600 hover:text-sky-700 hover:underline sm:text-4xl transition"
+              >
+                <h1>{job.title} at {job.company}</h1>
+              </a>
+            ) : (
+              <h1 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                {job.title} at {job.company}
+              </h1>
+            )}
             <p className="mt-2 text-sm text-slate-600">Posted on {job.postedDate}</p>
 
             <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -169,7 +180,18 @@ export default async function JobPage({ params }: JobPageProps) {
             <p className="relative text-sm font-semibold uppercase tracking-[0.12em] text-sky-200">
               Opportunities Meet Aspirations
             </p>
-            <h2 className="relative mt-2 text-2xl font-bold text-white sm:text-3xl">Job Title: {job.title}</h2>
+            {job.application?.applyUrl ? (
+              <a
+                href={job.application.applyUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="relative mt-2 inline-block text-2xl font-bold text-white hover:text-sky-200 hover:underline transition sm:text-3xl"
+              >
+                Job Title: {job.title}
+              </a>
+            ) : (
+              <h2 className="relative mt-2 text-2xl font-bold text-white sm:text-3xl">Job Title: {job.title}</h2>
+            )}
             <p className="relative mt-3 text-sm text-slate-200">
               {`Reports to: ${job.reportsTo ?? "Not specified"} • Department: ${job.department ?? "Not specified"} • Location: ${job.location}`}
             </p>

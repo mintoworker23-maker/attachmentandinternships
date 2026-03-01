@@ -34,3 +34,35 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+---
+
+## Firebase Authentication (Admin)
+
+The admin page (`/admin`) is now protected using Firebase Authentication. Before you can access the form, you must sign in with a Google account.
+
+To configure Firebase:
+
+1. Create a Firebase project at https://console.firebase.google.com/.
+2. Enable **Authentication** → **Sign-in method** → **Email/Password** (or other providers as desired).
+3. Copy your app's configuration and store each value in a `.env.local` file at the project root; Next.js exposes vars prefixed with `NEXT_PUBLIC_`.
+
+```env
+NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=...
+NEXT_PUBLIC_FIREBASE_APP_ID=...
+```
+
+4. Install the Firebase SDK if you haven't already:
+
+```bash
+npm install firebase
+```
+
+5. Restart the development server (`npm run dev`) after setting env vars.
+
+Once configured, visiting `/admin` will redirect unauthenticated users to an email/password login screen. After signing in with a valid account (you can create users via the Firebase Console under Authentication), the job management UI is accessible with a sign‑out button.
+

@@ -6,9 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "scrape:campusbiz": "node scripts/scrape-campusbiz-jobs.mjs",
+    "scrape:jobs": "node scripts/scrape-jobs.mjs",
+    "scrape:jobs:no-details": "node scripts/scrape-jobs.mjs --details false"
   },
   "dependencies": {
+    "firebase": "^12.10.0",
     "next": "16.1.6",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
