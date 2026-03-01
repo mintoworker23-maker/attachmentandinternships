@@ -174,11 +174,21 @@ function toDateString(value) {
   return date.toISOString().slice(0, 10);
 }
 
-function extractVacancyId(url, sourceName, fallbackIndex) {
-  // Try to extract numeric ID from URL
-  const match = url.match(/\/vacancy\/(\d+)-/i);
-  if (match) return `${sourceName.toLowerCase().slice(0, 2)}-${match[1]}`;
-  return `${sourceName.toLowerCase().slice(0, 2)}-${String(fallbackIndex + 1).padStart(6, "0")}`;
+function slugify(text) {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "") // Remove special characters
+    .replace(/\s+/g, "-") // Replace spaces with hyphens
+    .replace(/-+/g, "-") // Replace multiple hyphens with single hyphen
+    .slice(0, 60); // Limit length for URL safety
+}
+
+function extractVacancyId(title, company) {
+  // Create URL-friendly slug from job title and company
+  const titleSlug = slugify(title);
+  const companySlug = slugify(company);
+  return `${titleSlug}-${companySlug}`.slice(0, 100);
 }
 
 function inferCompany(title) {
@@ -363,11 +373,12 @@ function toJobsJsonRecord(listing, index) {
 
   const title = detail.title || listing.title;
   const location = detail.location || "Kenya";
+  const company = detail.company || inferCompany(title);
 
   const job = {
-    id: extractVacancyId(listing.url, listing.source, index),
+    id: extractVacancyId(title, company),
     title,
-    company: detail.company || inferCompany(title),
+    company,
     location,
     type: detail.type || inferType(listing.trackGuess),
     postedDate,
