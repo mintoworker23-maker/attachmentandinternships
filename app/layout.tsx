@@ -16,6 +16,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Attachment and Internships in Kenya",
   description: "Attachment and internship opportunities across Kenya.",
+  icons: {
+    icon: "/Favicon.png",
+    shortcut: "/Favicon.png",
+    apple: "/Favicon.png",
+  },
 };
 
 export default function RootLayout({

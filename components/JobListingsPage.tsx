@@ -156,15 +156,15 @@ export default function JobListingsPage({ title, track }: JobListingsPageProps) 
                 key={job.id}
                 className="overflow-hidden rounded-2xl border border-slate-300 bg-white transition hover:border-sky-400"
               >
-                <div className="grid min-h-[7.5rem] grid-cols-[5.5rem_1fr]">
+                <div className="grid min-h-[9rem] grid-cols-[7.5rem_1fr]">
                   <div className="relative flex h-full items-center justify-center bg-slate-100">
                     {job.image ? (
                       <Image
                         src={job.image}
                         alt={`${job.company} logo`}
                         fill
-                        sizes="88px"
-                        className="object-cover"
+                        sizes="120px"
+                        className="object-contain p-2"
                       />
                     ) : (
                       <span className="relative z-10 text-xs font-semibold uppercase text-slate-700">

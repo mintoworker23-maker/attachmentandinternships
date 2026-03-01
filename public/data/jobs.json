@@ -6,7 +6,55 @@
     "location": "Nairobi, Kenya",
     "type": "FullTime",
     "postedDate": "2026-03-01",
-    "track": "attachment"
+    "track": "attachment",
+    "category": "Accounting & Finance",
+    "department": "Finance",
+    "reportsTo": "Finance Manager",
+    "workMode": "Hybrid",
+    "experience": "1-2 years",
+    "educationLevel": "Bachelor's Degree",
+    "salaryRange": "KES 90,000 - 140,000 per month",
+    "overview": "Support strategic financial planning, budgeting, and performance analysis for airline operations.",
+    "rolePurpose": "Provide financial analysis that improves capital allocation, profitability, and risk decisions.",
+    "responsibilities": [
+      "Build and maintain financial models for route and fleet planning.",
+      "Prepare monthly performance dashboards and variance analysis.",
+      "Support annual budgeting and rolling forecast cycles.",
+      "Evaluate investment opportunities and business cases.",
+      "Partner with operations and procurement on cost optimization."
+    ],
+    "knowHow": [
+      "Strong financial modeling and valuation fundamentals.",
+      "Comfort with IFRS-based reporting concepts.",
+      "Advanced Excel and presentation skills."
+    ],
+    "problemSolvingAndAccountability": [
+      "Translate business data into recommendations for management.",
+      "Escalate significant financial risks promptly.",
+      "Improve reporting quality and planning accuracy."
+    ],
+    "qualifications": [
+      "Bachelor’s degree in Finance, Economics, or Actuarial Science.",
+      "1-2 years in corporate finance, FP&A, or advisory.",
+      "CPA, ACCA, or CFA progress is an added advantage."
+    ],
+    "tags": [
+      "Finance",
+      "FP&A",
+      "Aviation",
+      "Modeling"
+    ],
+    "benefits": [
+      "Medical cover",
+      "Learning budget",
+      "Transport allowance"
+    ],
+    "application": {
+      "deadline": "2026-03-21",
+      "applyUrl": "https://careers.jambojet.com/jobs/jp-010",
+      "instructions": "Submit CV and a one-page cover note highlighting relevant finance projects."
+    },
+    "image": "/is-hiring.png"
   },
   {
     "id": "jp-001",
@@ -15,7 +63,51 @@
     "location": "Nairobi, Kenya",
     "type": "Full-time",
     "postedDate": "2026-02-28",
-    "track": "attachment"
+    "track": "attachment",
+    "category": "Marketing & Communications",
+    "department": "Brand and Communications",
+    "reportsTo": "Communications Lead",
+    "workMode": "On-site",
+    "experience": "0-1 year",
+    "educationLevel": "Bachelor's Degree",
+    "salaryRange": "KES 55,000 - 75,000 per month",
+    "overview": "Coordinate internal and external communication materials across web, social, and events.",
+    "rolePurpose": "Improve brand consistency and communication turnaround time across teams.",
+    "responsibilities": [
+      "Draft announcements, social media copy, and newsletter content.",
+      "Support planning and execution of media and partner events.",
+      "Maintain communication calendars and campaign trackers.",
+      "Coordinate visual assets with design and product teams."
+    ],
+    "knowHow": [
+      "Clear written communication and editing skills.",
+      "Basic campaign planning and reporting knowledge.",
+      "Familiarity with Canva or similar tools."
+    ],
+    "problemSolvingAndAccountability": [
+      "Handle urgent communication requests with quality and speed.",
+      "Ensure all published content aligns with brand guidelines."
+    ],
+    "qualifications": [
+      "Degree or diploma in Communication, PR, Journalism, or related field.",
+      "Portfolio of writing samples is preferred."
+    ],
+    "tags": [
+      "Communications",
+      "Content",
+      "Brand"
+    ],
+    "benefits": [
+      "Medical cover",
+      "Mentorship",
+      "Hybrid Fridays"
+    ],
+    "application": {
+      "deadline": "2026-03-18",
+      "applyUrl": "https://careers.novastack.io/jobs/jp-001",
+      "instructions": "Attach CV plus two communication samples."
+    },
+    "image": "/is-hiring.png"
   },
   {
     "id": "jp-002",
@@ -24,7 +116,49 @@
     "location": "Kigali, Rwanda",
     "type": "On-site",
     "postedDate": "2026-02-26",
-    "track": "attachment"
+    "track": "attachment",
+    "category": "Operations",
+    "department": "Business Operations",
+    "reportsTo": "Operations Coordinator",
+    "workMode": "On-site",
+    "experience": "Entry level",
+    "educationLevel": "Diploma or Bachelor's Degree",
+    "salaryRange": "Stipend",
+    "overview": "Gain practical exposure to workflow monitoring, support logistics, and process documentation.",
+    "rolePurpose": "Strengthen day-to-day service delivery by supporting operational workflows.",
+    "responsibilities": [
+      "Assist with daily task coordination across operations teams.",
+      "Update process documentation and SLA trackers.",
+      "Support inventory, dispatch, and vendor follow-up."
+    ],
+    "knowHow": [
+      "Strong organization and time management.",
+      "Basic spreadsheet and reporting skills."
+    ],
+    "problemSolvingAndAccountability": [
+      "Escalate bottlenecks early and suggest practical fixes.",
+      "Keep operational records accurate and current."
+    ],
+    "qualifications": [
+      "Current student or recent graduate in Business, Logistics, or related area.",
+      "Availability for a 3-6 month attachment."
+    ],
+    "tags": [
+      "Operations",
+      "Attachment",
+      "Logistics"
+    ],
+    "benefits": [
+      "Monthly stipend",
+      "Transport support",
+      "Certificate on completion"
+    ],
+    "application": {
+      "deadline": "2026-03-16",
+      "applyUrl": "https://orbitlabs.africa/careers/jp-002",
+      "instructions": "Share CV and current academic transcript."
+    },
+    "image": "/is-hiring.png"
   },
   {
     "id": "jp-003",
@@ -33,7 +167,49 @@
     "location": "Kampala, Uganda",
     "type": "Hybrid",
     "postedDate": "2026-02-23",
-    "track": "attachment"
+    "track": "attachment",
+    "category": "Accounting & Finance",
+    "department": "Finance",
+    "reportsTo": "Senior Accountant",
+    "workMode": "Hybrid",
+    "experience": "Entry level",
+    "educationLevel": "Bachelor's Degree (ongoing or completed)",
+    "salaryRange": "Stipend",
+    "overview": "Support reconciliations, reporting packs, and budget tracking in a fast-paced team.",
+    "rolePurpose": "Improve reporting timeliness and finance process discipline.",
+    "responsibilities": [
+      "Assist with ledger reviews and account reconciliations.",
+      "Compile monthly expense summaries.",
+      "Support audit preparation and file organization."
+    ],
+    "knowHow": [
+      "Basic accounting principles and spreadsheet proficiency.",
+      "Attention to detail and data integrity mindset."
+    ],
+    "problemSolvingAndAccountability": [
+      "Identify reconciliation differences and support root-cause analysis.",
+      "Maintain accurate finance records and audit trails."
+    ],
+    "qualifications": [
+      "Studying or completed degree in Accounting, Finance, or Economics.",
+      "CPA/ACCA foundation level is an advantage."
+    ],
+    "tags": [
+      "Finance",
+      "Accounting",
+      "Attachment"
+    ],
+    "benefits": [
+      "Meal allowance",
+      "Mentorship",
+      "Potential conversion opportunity"
+    ],
+    "application": {
+      "deadline": "2026-03-14",
+      "applyUrl": "https://insightedge.ug/careers/jp-003",
+      "instructions": "Submit CV plus brief statement of interest in finance."
+    },
+    "image": "/is-hiring.png"
   },
   {
     "id": "jp-004",
@@ -42,7 +218,51 @@
     "location": "Lagos, Nigeria",
     "type": "Internship",
     "postedDate": "2026-02-27",
-    "track": "internship"
+    "track": "internship",
+    "category": "Engineering",
+    "department": "Platform Engineering",
+    "reportsTo": "Engineering Manager",
+    "workMode": "Hybrid",
+    "experience": "Intern level",
+    "educationLevel": "Bachelor's Degree (ongoing)",
+    "salaryRange": "NGN 150,000 - 220,000 per month",
+    "overview": "Work with engineers to ship backend and frontend features with strong code quality practices.",
+    "rolePurpose": "Contribute production-ready code while building software engineering fundamentals.",
+    "responsibilities": [
+      "Build and test product features under engineer mentorship.",
+      "Fix defects and improve reliability in existing modules.",
+      "Write unit tests and participate in code reviews."
+    ],
+    "knowHow": [
+      "Strong JavaScript/TypeScript fundamentals.",
+      "Basic API and database concepts.",
+      "Git collaboration workflows."
+    ],
+    "problemSolvingAndAccountability": [
+      "Break down tasks and communicate delivery risks early.",
+      "Own assigned tickets from implementation to validation."
+    ],
+    "qualifications": [
+      "Pursuing degree in Computer Science or related field.",
+      "Portfolio or GitHub projects showing practical coding experience."
+    ],
+    "tags": [
+      "Software",
+      "Internship",
+      "TypeScript",
+      "Web"
+    ],
+    "benefits": [
+      "Intern stipend",
+      "Mentorship",
+      "Laptop support"
+    ],
+    "application": {
+      "deadline": "2026-03-22",
+      "applyUrl": "https://cloudmesh.dev/careers/jp-004",
+      "instructions": "Attach CV and link to GitHub profile."
+    },
+    "image": "/is-hiring.png"
   },
   {
     "id": "jp-005",
@@ -51,7 +271,51 @@
     "location": "Remote",
     "type": "Internship",
     "postedDate": "2026-02-25",
-    "track": "internship"
+    "track": "internship",
+    "category": "DevOps & Infrastructure",
+    "department": "Cloud Operations",
+    "reportsTo": "DevOps Lead",
+    "workMode": "Remote",
+    "experience": "Intern level",
+    "educationLevel": "Bachelor's Degree (ongoing or completed)",
+    "salaryRange": "USD 450 - 650 per month",
+    "overview": "Support CI/CD pipelines, environment monitoring, and cloud infrastructure operations.",
+    "rolePurpose": "Improve deployment speed and platform reliability with automation-first practices.",
+    "responsibilities": [
+      "Assist with CI pipeline maintenance and troubleshooting.",
+      "Monitor cloud resources and create basic dashboards.",
+      "Support incident documentation and postmortem follow-ups."
+    ],
+    "knowHow": [
+      "Linux command line fundamentals.",
+      "Basic container and cloud concepts.",
+      "Scripting with Bash or Python."
+    ],
+    "problemSolvingAndAccountability": [
+      "Investigate deployment issues and suggest remediations.",
+      "Document recurring operational runbooks."
+    ],
+    "qualifications": [
+      "Exposure to AWS, GCP, or Azure is preferred.",
+      "Understanding of version control and CI tools."
+    ],
+    "tags": [
+      "DevOps",
+      "Cloud",
+      "Internship",
+      "Remote"
+    ],
+    "benefits": [
+      "Remote stipend",
+      "Certification support",
+      "Flexible schedule"
+    ],
+    "application": {
+      "deadline": "2026-03-19",
+      "applyUrl": "https://scalehive.io/jobs/jp-005",
+      "instructions": "Submit CV and short note about a deployment project you worked on."
+    },
+    "image": "/is-hiring.png"
   },
   {
     "id": "jp-006",
@@ -60,7 +324,49 @@
     "location": "Mombasa, Kenya",
     "type": "Internship",
     "postedDate": "2026-02-22",
-    "track": "internship"
+    "track": "internship",
+    "category": "Data & Analytics",
+    "department": "Business Intelligence",
+    "reportsTo": "Analytics Manager",
+    "workMode": "On-site",
+    "experience": "Intern level",
+    "educationLevel": "Bachelor's Degree (ongoing)",
+    "salaryRange": "KES 35,000 - 55,000 per month",
+    "overview": "Analyze operational and customer data to support reporting and decision making.",
+    "rolePurpose": "Deliver reliable insights through clean datasets and clear dashboards.",
+    "responsibilities": [
+      "Clean and validate data from multiple business systems.",
+      "Build recurring reports and dashboard views.",
+      "Support ad hoc analysis for cross-functional teams."
+    ],
+    "knowHow": [
+      "Spreadsheet expertise and SQL basics.",
+      "Data visualization fundamentals."
+    ],
+    "problemSolvingAndAccountability": [
+      "Detect inconsistencies and improve data quality rules.",
+      "Communicate findings clearly to non-technical stakeholders."
+    ],
+    "qualifications": [
+      "Pursuing degree in Statistics, Economics, Computer Science, or related field.",
+      "Experience with Power BI, Tableau, or Looker is a plus."
+    ],
+    "tags": [
+      "Data",
+      "Analytics",
+      "Internship"
+    ],
+    "benefits": [
+      "Intern stipend",
+      "Learning sessions",
+      "Career coaching"
+    ],
+    "application": {
+      "deadline": "2026-03-13",
+      "applyUrl": "https://brightcore.co.ke/careers/jp-006",
+      "instructions": "Share CV and one sample dashboard or analysis project."
+    },
+    "image": "/is-hiring.png"
   },
   {
     "id": "jp-007",
@@ -69,7 +375,50 @@
     "location": "Remote",
     "type": "Graduate Program",
     "postedDate": "2026-02-28",
-    "track": "graduate-trainee"
+    "track": "graduate-trainee",
+    "category": "Engineering",
+    "department": "Product Engineering",
+    "reportsTo": "Trainee Program Lead",
+    "workMode": "Remote",
+    "experience": "Graduate entry level",
+    "educationLevel": "Bachelor's Degree",
+    "salaryRange": "USD 700 - 1,000 per month",
+    "overview": "Structured graduate program focused on modern web engineering and delivery practices.",
+    "rolePurpose": "Transition graduates into effective product engineers through hands-on delivery.",
+    "responsibilities": [
+      "Complete learning sprints and practical coding assignments.",
+      "Contribute to real product modules with mentor reviews.",
+      "Present demos and technical write-ups during the program."
+    ],
+    "knowHow": [
+      "Comfortable with at least one programming language.",
+      "Basic understanding of APIs and data structures."
+    ],
+    "problemSolvingAndAccountability": [
+      "Demonstrate consistent progress across learning milestones.",
+      "Implement feedback quickly and improve code quality."
+    ],
+    "qualifications": [
+      "Recent graduate in Computer Science, Engineering, or related field.",
+      "Strong problem-solving and collaboration skills."
+    ],
+    "tags": [
+      "Graduate",
+      "Software",
+      "Remote",
+      "Training"
+    ],
+    "benefits": [
+      "Paid training",
+      "Mentorship",
+      "Potential full-time conversion"
+    ],
+    "application": {
+      "deadline": "2026-03-25",
+      "applyUrl": "https://pixelmint.dev/graduate/jp-007",
+      "instructions": "Upload CV and complete the online coding assessment."
+    },
+    "image": "/is-hiring.png"
   },
   {
     "id": "jp-008",
@@ -78,7 +427,50 @@
     "location": "Nairobi, Kenya",
     "type": "Graduate Program",
     "postedDate": "2026-02-24",
-    "track": "graduate-trainee"
+    "track": "graduate-trainee",
+    "category": "Product Management",
+    "department": "Product",
+    "reportsTo": "Senior Product Manager",
+    "workMode": "Hybrid",
+    "experience": "Graduate entry level",
+    "educationLevel": "Bachelor's Degree",
+    "salaryRange": "KES 80,000 - 120,000 per month",
+    "overview": "Learn product discovery, prioritization, and delivery in a structured trainee track.",
+    "rolePurpose": "Support product squads with research, planning, and launch coordination.",
+    "responsibilities": [
+      "Collect user insights and synthesize key product themes.",
+      "Support backlog grooming and roadmap documentation.",
+      "Coordinate release notes and stakeholder updates."
+    ],
+    "knowHow": [
+      "Strong communication and structured thinking.",
+      "Basic understanding of agile product workflows."
+    ],
+    "problemSolvingAndAccountability": [
+      "Turn ambiguous requests into clear product tasks.",
+      "Track commitments and follow through on delivery checkpoints."
+    ],
+    "qualifications": [
+      "Recent graduate in Business, Engineering, or related field.",
+      "Interest in product strategy and user experience."
+    ],
+    "tags": [
+      "Graduate",
+      "Product",
+      "Roadmap",
+      "Research"
+    ],
+    "benefits": [
+      "Health cover",
+      "Learning stipend",
+      "Mentorship program"
+    ],
+    "application": {
+      "deadline": "2026-03-20",
+      "applyUrl": "https://asterworks.com/careers/jp-008",
+      "instructions": "Submit CV and answer the product case prompt in the form."
+    },
+    "image": "/is-hiring.png"
   },
   {
     "id": "jp-009",
@@ -87,6 +479,48 @@
     "location": "Dar es Salaam, Tanzania",
     "type": "Graduate Program",
     "postedDate": "2026-02-21",
-    "track": "graduate-trainee"
+    "track": "graduate-trainee",
+    "category": "Business Analysis",
+    "department": "Strategy and Transformation",
+    "reportsTo": "Business Analysis Lead",
+    "workMode": "On-site",
+    "experience": "Graduate entry level",
+    "educationLevel": "Bachelor's Degree",
+    "salaryRange": "TZS 1,600,000 - 2,300,000 per month",
+    "overview": "Translate business needs into clear requirements and actionable improvement plans.",
+    "rolePurpose": "Support process optimization and data-informed decision making across business units.",
+    "responsibilities": [
+      "Gather requirements through interviews and workshops.",
+      "Map current and target business processes.",
+      "Support KPI definition and reporting design."
+    ],
+    "knowHow": [
+      "Strong analytical reasoning and documentation skills.",
+      "Basic process mapping and reporting tools."
+    ],
+    "problemSolvingAndAccountability": [
+      "Validate requirements with stakeholders before implementation.",
+      "Track analysis outputs and business impact metrics."
+    ],
+    "qualifications": [
+      "Recent graduate in Business, Economics, IT, or related field.",
+      "Knowledge of Excel and presentation tools."
+    ],
+    "tags": [
+      "Graduate",
+      "Business Analysis",
+      "Strategy"
+    ],
+    "benefits": [
+      "Medical cover",
+      "Structured onboarding",
+      "Career development plan"
+    ],
+    "application": {
+      "deadline": "2026-03-15",
+      "applyUrl": "https://northstarsystems.africa/jobs/jp-009",
+      "instructions": "Attach CV and one-page statement on your interest in business analysis."
+    },
+    "image": "/is-hiring.png"
   }
 ]

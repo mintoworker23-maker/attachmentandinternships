@@ -17,6 +17,26 @@ type JobListing = {
   type: string;
   postedDate: string;
   track: ListingTrack;
+  category?: string;
+  department?: string;
+  reportsTo?: string;
+  workMode?: string;
+  experience?: string;
+  educationLevel?: string;
+  salaryRange?: string;
+  overview?: string;
+  rolePurpose?: string;
+  responsibilities?: string[];
+  knowHow?: string[];
+  problemSolvingAndAccountability?: string[];
+  qualifications?: string[];
+  tags?: string[];
+  benefits?: string[];
+  application?: {
+    deadline?: string;
+    applyUrl?: string;
+    instructions?: string;
+  };
   image?: string;
 };
 
@@ -40,25 +60,6 @@ const trackToLabel: Record<ListingTrack, string> = {
   "graduate-trainee": "Graduate Trainees",
 };
 
-const financeResponsibilities = [
-  "Develop and maintain financial models specific to aviation operations, including fleet planning, route profitability, and infrastructure costing.",
-  "Conduct scenario analysis and stress-testing for key industry risks such as fuel price volatility, FX fluctuations, and liquidity constraints.",
-  "Support capital restructuring initiatives, including hybrid instruments and equity solutions for subsidiaries.",
-  "Prepare board papers, investor presentations, and executive dashboards with clear visual communication.",
-  "Benchmark airline financial and operational performance against industry peers.",
-  "Collaborate with procurement, operations, and strategy teams to ensure compliance with finance and governance policies.",
-  "Contribute to special projects such as fleet expansion, infrastructure development, and sustainability initiatives.",
-];
-
-const financeQualifications = [
-  "Bachelor’s degree in Finance, Actuarial Science, Economics, or related field.",
-  "1–2 years of relevant experience in corporate finance, aviation finance, or actuarial analysis.",
-  "Professional qualifications (CFA, CPA, ACCA, Actuarial certifications) are an added advantage.",
-  "Strong knowledge of IFRS/IAS and international accounting standards.",
-  "Proficiency in financial modelling, valuation techniques, and scenario planning.",
-  "Advanced skills in Microsoft Excel, PowerPoint, and financial analysis tools.",
-];
-
 async function getJobs() {
   const filePath = path.join(process.cwd(), "public", "data", "jobs.json");
   const file = await fs.readFile(filePath, "utf8");
@@ -79,13 +80,32 @@ export default async function JobPage({ params }: JobPageProps) {
     notFound();
   }
 
-  const isCorporateFinance = job.title.toLowerCase() === "corporate finance analyst";
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
   const listingUrl = `${siteUrl}/jobs/${job.id}`;
   const shareMessage = `Check out this job: ${job.title} at ${job.company} in ${job.location}. Apply here: ${listingUrl}`;
   const whatsappShareUrl = `https://wa.me/?text=${encodeURIComponent(shareMessage)}`;
   const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(listingUrl)}`;
   const xShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Check out this job opening: ${job.title}`)}&url=${encodeURIComponent(listingUrl)}`;
+  const responsibilities = job.responsibilities ?? [
+    "Support team projects and deliverables according to timelines.",
+    "Maintain accurate reporting and stakeholder communication.",
+    "Contribute to process improvements and risk monitoring.",
+  ];
+  const knowHow = job.knowHow ?? [
+    "Technical and domain knowledge relevant to the role.",
+    "Planning, reporting, and stakeholder collaboration skills.",
+    "Strong communication and teamwork orientation.",
+  ];
+  const problemSolvingAndAccountability = job.problemSolvingAndAccountability ?? [
+    "Works within policies and regulatory frameworks to support decisions.",
+    "Interprets data, identifies trends, and recommends practical actions.",
+    "Escalates major operational or strategic risks where required.",
+  ];
+  const qualifications = job.qualifications ?? [
+    "Bachelor’s degree in a related field.",
+    "Relevant practical experience in the role area.",
+    "Strong analytical, communication, and collaboration skills.",
+  ];
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#e7edf8] via-[#edf3fb] to-[#dce7f6] px-3 pb-4 pt-20 sm:px-4">
@@ -114,15 +134,13 @@ export default async function JobPage({ params }: JobPageProps) {
                 {trackToLabel[job.track]}
               </Link>
               <span>&gt;</span>
-              <span className="text-slate-900">Accounting &amp; Finance</span>
+              <span className="text-slate-900">{job.category ?? "Job Details"}</span>
             </nav>
 
             <h1 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
               {job.title} at {job.company}
             </h1>
-            <p className="mt-2 text-sm text-slate-600">
-              posted {isCorporateFinance ? "59 seconds ago" : `on ${job.postedDate}`}
-            </p>
+            <p className="mt-2 text-sm text-slate-600">Posted on {job.postedDate}</p>
 
             <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               <div className="rounded-xl border border-slate-300 bg-slate-100 p-3">
@@ -135,13 +153,11 @@ export default async function JobPage({ params }: JobPageProps) {
               </div>
               <div className="rounded-xl border border-slate-300 bg-slate-100 p-3">
                 <p className="text-xs uppercase tracking-[0.08em] text-slate-600">Experience</p>
-                <p className="mt-1 text-sm font-semibold text-slate-900">
-                  {isCorporateFinance ? "At least 1-2 years" : "1+ years"}
-                </p>
+                <p className="mt-1 text-sm font-semibold text-slate-900">{job.experience ?? "Not specified"}</p>
               </div>
               <div className="rounded-xl border border-slate-300 bg-slate-100 p-3">
                 <p className="text-xs uppercase tracking-[0.08em] text-slate-600">Education Level</p>
-                <p className="mt-1 text-sm font-semibold text-slate-900">Bachelor&apos;s Degree</p>
+                <p className="mt-1 text-sm font-semibold text-slate-900">{job.educationLevel ?? "Not specified"}</p>
               </div>
             </div>
           </section>
@@ -155,33 +171,21 @@ export default async function JobPage({ params }: JobPageProps) {
             </p>
             <h2 className="relative mt-2 text-2xl font-bold text-white sm:text-3xl">Job Title: {job.title}</h2>
             <p className="relative mt-3 text-sm text-slate-200">
-              Reports to: Finance Manager • Department: Finance • Location: Nairobi, Kenya
+              {`Reports to: ${job.reportsTo ?? "Not specified"} • Department: ${job.department ?? "Not specified"} • Location: ${job.location}`}
             </p>
           </section>
 
           <section className="rounded-[2rem] border border-slate-300 bg-white p-6 sm:p-8">
             <h3 className="text-xl font-semibold text-slate-900">Role Purpose Statement</h3>
             <p className="mt-3 text-sm leading-7 text-slate-700">
-              {isCorporateFinance
-                ? "The Corporate Finance Analyst will provide critical financial analysis and strategic support to the business, driving informed decision-making on capital investments, cost optimisation, and resource allocation. This role will focus on evaluating financial performance, preparing forecasts, and analysing business risks to support sustainable growth."
-                : `${job.title} will provide strategic and operational support to ${job.company}, helping improve delivery, reporting, and decision quality across core workflows.`}
+              {job.rolePurpose ??
+                `${job.title} will provide strategic and operational support to ${job.company}, helping improve delivery, reporting, and decision quality across core workflows.`}
             </p>
-            <p className="mt-3 text-sm leading-7 text-slate-700">
-              {isCorporateFinance
-                ? "The analyst will collaborate with cross-functional teams, contribute to budgeting and financial planning, and assist in developing strategies that enhance operational efficiency and profitability. Additionally, the role includes monitoring compliance with financial policies and reporting requirements while identifying opportunities for process improvement and value creation."
-                : "The successful candidate will collaborate with cross-functional teams, support planning cycles, and identify opportunities for process improvements and value creation."}
-            </p>
+            {job.overview && <p className="mt-3 text-sm leading-7 text-slate-700">{job.overview}</p>}
 
             <h3 className="mt-8 text-xl font-semibold text-slate-900">Key Responsibilities</h3>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
-              {(isCorporateFinance
-                ? financeResponsibilities
-                : [
-                    "Support team projects and deliverables according to timelines.",
-                    "Maintain accurate reporting and stakeholder communication.",
-                    "Contribute to process improvements and risk monitoring.",
-                  ]
-              ).map((item) => (
+              {responsibilities.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
@@ -190,45 +194,51 @@ export default async function JobPage({ params }: JobPageProps) {
               <div className="rounded-2xl border border-slate-300 bg-slate-100 p-5">
                 <h4 className="text-lg font-semibold text-slate-900">Know How</h4>
                 <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
-                  <li>Technical Knowledge: Financial modelling, accounting principles, and finance tools.</li>
-                  <li>Management Skills: Project tracking, budgeting, and reporting coordination.</li>
-                  <li>Human Relations Skills: Strong communication with teams and stakeholders.</li>
-                  <li>Specialized Knowledge: Risk management, investment appraisal, and valuation.</li>
+                  {knowHow.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
                 </ul>
               </div>
 
               <div className="rounded-2xl border border-slate-300 bg-slate-100 p-5">
                 <h4 className="text-lg font-semibold text-slate-900">Problem Solving &amp; Accountability</h4>
                 <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
-                  <li>Works within policies and regulatory frameworks to support decisions.</li>
-                  <li>Interprets data, identifies trends, and recommends practical actions.</li>
-                  <li>Supports significant budgets and allocations with measurable business impact.</li>
-                  <li>Escalates major financial and strategic risks where required.</li>
+                  {problemSolvingAndAccountability.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
                 </ul>
               </div>
             </div>
 
             <h3 className="mt-8 text-xl font-semibold text-slate-900">Qualifications</h3>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
-              {(isCorporateFinance
-                ? financeQualifications
-                : [
-                    "Bachelor’s degree in a related field.",
-                    "Relevant practical experience in the role area.",
-                    "Strong analytical, communication, and collaboration skills.",
-                  ]
-              ).map((item) => (
+              {qualifications.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <button
-                type="button"
-                className="rounded-full bg-sky-500 px-5 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-sky-400"
-              >
-                Read More &amp; Apply
-              </button>
+              {job.application?.applyUrl ? (
+                <a
+                  href={job.application.applyUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full bg-sky-500 px-5 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-sky-400"
+                >
+                  Read More &amp; Apply
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  className="rounded-full bg-sky-500 px-5 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-sky-400"
+                >
+                  Read More &amp; Apply
+                </button>
+              )}
+              {job.application?.deadline && (
+                <p className="text-sm text-slate-700">Application deadline: {job.application.deadline}</p>
+              )}
+              {job.salaryRange && <p className="text-sm text-slate-700">Salary: {job.salaryRange}</p>}
             </div>
           </section>
 

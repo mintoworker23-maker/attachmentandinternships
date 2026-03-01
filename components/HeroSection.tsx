@@ -12,13 +12,13 @@ type Slide = {
 
 const slides: Slide[] = [
   {
-    image: "/bg.jpg",
-    eyebrow: "Featured Opportunity",
-    title: "Build The Future Of Hiring",
+    image: "/black-college-student.jpg",
+    eyebrow: "Job Opportunities",
+    title: "Get attachment or Internship opportunities",
     subtitle: "Discover roles that match your goals and apply in minutes.",
   },
   {
-    image: "/bg.png",
+    image: "/image.png",
     eyebrow: "New This Week",
     title: "Find Your Next Career Move",
     subtitle: "From internships to graduate programs and full-time jobs.",
