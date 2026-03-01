@@ -18,6 +18,13 @@
       "type": "rss",
       "track": "graduate-trainee"
     }
+    ,
+    {
+      "name": "Opportunities for Young Kenyans - Internships",
+      "url": "https://opportunitiesforyoungkenyans.co.ke/category/internships/feed/",
+      "type": "rss",
+      "track": "internship"
+    }
   ],
   "options": {
     "fetchDetails": true,

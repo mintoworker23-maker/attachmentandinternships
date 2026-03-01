@@ -375,6 +375,14 @@ function toJobsJsonRecord(listing, index) {
   const location = detail.location || "Kenya";
   const company = detail.company || inferCompany(title);
 
+  const rawOverview = detail.overview || listing.summary || "";
+  const overview = (() => {
+    if (!rawOverview) return "";
+    const idx = rawOverview.search(/<!doctype\s+html|<html|<body/i);
+    if (idx !== -1) return rawOverview.slice(0, idx);
+    return rawOverview;
+  })();
+
   const job = {
     id: extractVacancyId(title, company),
     title,
@@ -391,7 +399,7 @@ function toJobsJsonRecord(listing, index) {
     experience: detail.experience || "",
     educationLevel: detail.educationLevel || "",
     salaryRange: detail.salaryRange || "",
-    overview: detail.overview || listing.summary || "",
+    overview: overview,
     rolePurpose: detail.rolePurpose || "",
     responsibilities: detail.responsibilities || [],
     knowHow: detail.knowHow || [],
