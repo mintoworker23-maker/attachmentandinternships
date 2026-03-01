@@ -17,7 +17,6 @@ const defaultLinks: NavLink[] = [
   { label: "Attachment", href: "/attachment" },
   { label: "Internships", href: "/internships" },
   { label: "Graduate Trainees", href: "/graduate-trainees" },
-  { label: "Contact Us", href: "#footer" },
 ];
 
 export default function Navbar({
