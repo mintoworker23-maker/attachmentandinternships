@@ -90,7 +90,7 @@ export default async function JobPage({ params }: JobPageProps) {
     notFound();
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://atttachmentsandinternships.vercel.app";
   const listingUrl = `${siteUrl}/jobs/${job.id}`;
   const shareMessage = `Check out this job: ${job.title} at ${job.company} in ${job.location}. Apply here: ${listingUrl}`;
   const whatsappShareUrl = `https://wa.me/?text=${encodeURIComponent(shareMessage)}`;
