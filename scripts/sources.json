@@ -30,6 +30,12 @@
       "url": "https://openedcareer.com/category/internships/feed/",
       "type": "rss",
       "track": "internship"
+    },
+    {
+      "name": "CampusBiz - Trainee",
+      "url": "https://campusbiz.co.ke/careers?feed=job_feed&job_types=trainee&search_location&job_categories&search_keywords",
+      "type": "rss",
+      "track": "trainee"
     }
   ],
   "options": {
