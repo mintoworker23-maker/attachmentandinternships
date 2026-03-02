@@ -1,0 +1,79 @@
+[2026-03-02 03:37:00] Starting job scraper...
+🚀 Multi-Source Job Scraper
+
+📋 Sources config: scripts/sources.json
+   Total sources: 6
+   Details enabled: true
+   Deduplication: true
+
+
+📡 Scraping: CampusBiz - Attachments
+   URL: https://campusbiz.co.ke/careers?feed=job_feed&job_types=attachment
+   Found: 10 listings
+   📄 Fetching details...
+   Progress: 1/10   Progress: 2/10   Progress: 3/10   Progress: 4/10   Progress: 5/10   Progress: 6/10   Progress: 7/10   Progress: 8/10   Progress: 9/10   Progress: 10/10
+   ✓ Retrieved details for 10/10 listings
+
+📡 Scraping: CampusBiz - Internships
+   URL: https://campusbiz.co.ke/careers?feed=job_feed&job_types=internship
+   Found: 10 listings
+   📄 Fetching details...
+   Progress: 1/10   Progress: 2/10   Progress: 3/10   Progress: 4/10   Progress: 5/10   Progress: 6/10   Progress: 7/10   Progress: 8/10   Progress: 9/10   Progress: 10/10
+   ✓ Retrieved details for 10/10 listings
+
+📡 Scraping: CampusBiz - Graduate Programs
+   URL: https://campusbiz.co.ke/careers?feed=job_feed&job_types=trainee
+   Found: 10 listings
+   📄 Fetching details...
+   Progress: 1/10   Progress: 2/10   Progress: 3/10   Progress: 4/10   Progress: 5/10   Progress: 6/10   Progress: 7/10   Progress: 8/10   Progress: 9/10   Progress: 10/10
+   ✓ Retrieved details for 10/10 listings
+
+📡 Scraping: Opportunities for Young Kenyans - Internships
+   URL: https://opportunitiesforyoungkenyans.co.ke/category/internships/feed/
+   Found: 10 listings
+   📄 Fetching details...
+   Progress: 1/10   Progress: 2/10   Progress: 3/10   Progress: 4/10   Progress: 5/10   Progress: 6/10   Progress: 7/10   Progress: 8/10   Progress: 9/10   Progress: 10/10
+   ✓ Retrieved details for 0/10 listings
+
+📡 Scraping: Opened Career - Internships
+   URL: https://openedcareer.com/category/internships/feed/
+   Found: 15 listings
+   📄 Fetching details...
+   Progress: 1/15   Progress: 2/15   Progress: 3/15   Progress: 4/15   Progress: 5/15   Progress: 6/15   Progress: 7/15   Progress: 8/15   Progress: 9/15   Progress: 10/15   Progress: 11/15   Progress: 12/15   Progress: 13/15   Progress: 14/15   Progress: 15/15
+   ✓ Retrieved details for 0/15 listings
+
+📡 Scraping: CampusBiz - Trainee
+   URL: https://campusbiz.co.ke/careers?feed=job_feed&job_types=trainee&search_location&job_categories&search_keywords
+   Found: 10 listings
+   📄 Fetching details...
+   Progress: 1/10   Progress: 2/10   Progress: 3/10   Progress: 4/10   Progress: 5/10   Progress: 6/10   Progress: 7/10   Progress: 8/10   Progress: 9/10   Progress: 10/10
+   ✓ Retrieved details for 10/10 listings
+
+📊 Total listings: 65
+✓ After deduplication: 55
+
+💾 Raw data saved: /home/teddy-omondi/Desktop/job-posting-website/public/data/all-jobs-raw.json
+💾 jobs.json format saved: /home/teddy-omondi/Desktop/job-posting-website/public/data/all-jobs.json
+
+📈 Detail scrape status:
+   ✓ OK: 30
+   ⚠ Partial: 25
+   ✗ Failed: 0
+
+✨ Scraping complete!
+[2026-03-02 03:37:00] Scraper completed successfully
+[2026-03-02 03:37:00] Jobs before: 55, after: 55
+[2026-03-02 03:37:00] Changes detected, committing...
+[main 4d8bde8] Auto-update: Scrape jobs (2026-03-02 03:38)
+ 2 files changed, 1016 insertions(+), 3 deletions(-)
+To https://github.com/mintoworker23-maker/attachmentandinternships.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/mintoworker23-maker/attachmentandinternships.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2026-03-02 03:37:00] Push failed
+[2026-03-02 03:37:00] Changes committed and pushed
+[2026-03-02 03:37:00] Scraper run complete

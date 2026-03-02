@@ -383,6 +383,11 @@ function toJobsJsonRecord(listing, index) {
     return rawOverview;
   })();
 
+  // prefer logo from raw schema when available (CampusBiz provides it)
+  const imageUrl =
+    detail.rawJobPosting?.hiringOrganization?.logo ||
+    DEFAULT_IMAGE;
+
   const job = {
     id: extractVacancyId(title, company),
     title,
@@ -391,7 +396,7 @@ function toJobsJsonRecord(listing, index) {
     type: detail.type || inferType(listing.trackGuess),
     postedDate,
     track: listing.trackGuess,
-    image: DEFAULT_IMAGE,
+    image: imageUrl,
     category: detail.category || "",
     department: detail.department || "",
     reportsTo: detail.reportsTo || "",
