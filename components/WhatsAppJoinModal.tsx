@@ -6,7 +6,7 @@ type WhatsAppJoinModalProps = {
   jobTitle: string;
 };
 
-const DEFAULT_CHANNEL_URL = "https://whatsapp.com/channel";
+const DEFAULT_CHANNEL_URL = "http://whatsapp.com/channel/0029Vb6DKVI0LKZ6E5x8PS1O";
 
 export default function WhatsAppJoinModal({ jobTitle }: WhatsAppJoinModalProps) {
   const [isOpen, setIsOpen] = useState(true);

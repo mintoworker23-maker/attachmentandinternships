@@ -2,19 +2,19 @@
   "sources": [
     {
       "name": "CampusBiz - Attachments",
-      "url": "https://campusbiz.co.ke/careers?feed=job_feed&job_types=attachment&search_location&job_categories&search_keywords",
+      "url": "https://campusbiz.co.ke/careers?feed=job_feed&job_types=attachment",
       "type": "rss",
       "track": "attachment"
     },
     {
       "name": "CampusBiz - Internships",
-      "url": "https://campusbiz.co.ke/careers?feed=job_feed&job_types=internship&search_location&job_categories&search_keywords",
+      "url": "https://campusbiz.co.ke/careers?feed=job_feed&job_types=internship",
       "type": "rss",
       "track": "internship"
     },
     {
       "name": "CampusBiz - Graduate Programs",
-      "url": "https://campusbiz.co.ke/careers?feed=job_feed&job_types=graduate_trainee&search_location&job_categories&search_keywords",
+      "url": "https://campusbiz.co.ke/careers?feed=job_feed&job_types=trainee",
       "type": "rss",
       "track": "graduate-trainee"
     }
