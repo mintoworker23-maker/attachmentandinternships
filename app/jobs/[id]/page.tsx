@@ -96,26 +96,11 @@ export default async function JobPage({ params }: JobPageProps) {
   const whatsappShareUrl = `https://wa.me/?text=${encodeURIComponent(shareMessage)}`;
   const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(listingUrl)}`;
   const xShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Check out this job opening: ${job.title}`)}&url=${encodeURIComponent(listingUrl)}`;
-  const responsibilities = job.responsibilities ?? [
-    "Support team projects and deliverables according to timelines.",
-    "Maintain accurate reporting and stakeholder communication.",
-    "Contribute to process improvements and risk monitoring.",
-  ];
-  const knowHow = job.knowHow ?? [
-    "Technical and domain knowledge relevant to the role.",
-    "Planning, reporting, and stakeholder collaboration skills.",
-    "Strong communication and teamwork orientation.",
-  ];
-  const problemSolvingAndAccountability = job.problemSolvingAndAccountability ?? [
-    "Works within policies and regulatory frameworks to support decisions.",
-    "Interprets data, identifies trends, and recommends practical actions.",
-    "Escalates major operational or strategic risks where required.",
-  ];
-  const qualifications = job.qualifications ?? [
-    "Bachelor’s degree in a related field.",
-    "Relevant practical experience in the role area.",
-    "Strong analytical, communication, and collaboration skills.",
-  ];
+  // only use the arrays provided by the source; don't invent placeholder content
+  const responsibilities = job.responsibilities ?? [];
+  const knowHow = job.knowHow ?? [];
+  const problemSolvingAndAccountability = job.problemSolvingAndAccountability ?? [];
+  const qualifications = job.qualifications ?? [];
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#e7edf8] via-[#edf3fb] to-[#dce7f6] px-3 pb-4 pt-20 sm:px-4">
@@ -210,8 +195,7 @@ export default async function JobPage({ params }: JobPageProps) {
           <section className="rounded-[2rem] border border-slate-300 bg-white p-6 sm:p-8">
             <h3 className="text-xl font-semibold text-slate-900">Role Purpose Statement</h3>
             <p className="mt-3 text-sm leading-7 text-slate-700">
-              {job.rolePurpose ??
-                `${job.title} will provide strategic and operational support to ${job.company}, helping improve delivery, reporting, and decision quality across core workflows.`}
+              {job.rolePurpose || ""}
             </p>
             {job.overview && (
               <div className="mt-3 text-sm leading-7 text-slate-700">
@@ -219,39 +203,53 @@ export default async function JobPage({ params }: JobPageProps) {
               </div>
             )}
 
-            <h3 className="mt-8 text-xl font-semibold text-slate-900">Key Responsibilities</h3>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
-              {responsibilities.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-
-            <div className="mt-8 grid gap-4 md:grid-cols-2">
-              <div className="rounded-2xl border border-slate-300 bg-slate-100 p-5">
-                <h4 className="text-lg font-semibold text-slate-900">Know How</h4>
+            {responsibilities.length > 0 && (
+              <>
+                <h3 className="mt-8 text-xl font-semibold text-slate-900">Key Responsibilities</h3>
                 <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
-                  {knowHow.map((item) => (
+                  {responsibilities.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
-              </div>
+              </>
+            )}
 
-              <div className="rounded-2xl border border-slate-300 bg-slate-100 p-5">
-                <h4 className="text-lg font-semibold text-slate-900">Problem Solving &amp; Accountability</h4>
+            {(knowHow.length > 0 || problemSolvingAndAccountability.length > 0) && (
+              <div className="mt-8 grid gap-4 md:grid-cols-2">
+                {knowHow.length > 0 && (
+                  <div className="rounded-2xl border border-slate-300 bg-slate-100 p-5">
+                    <h4 className="text-lg font-semibold text-slate-900">Know How</h4>
+                    <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
+                      {knowHow.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {problemSolvingAndAccountability.length > 0 && (
+                  <div className="rounded-2xl border border-slate-300 bg-slate-100 p-5">
+                    <h4 className="text-lg font-semibold text-slate-900">Problem Solving &amp; Accountability</h4>
+                    <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
+                      {problemSolvingAndAccountability.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {qualifications.length > 0 && (
+              <>
+                <h3 className="mt-8 text-xl font-semibold text-slate-900">Qualifications</h3>
                 <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
-                  {problemSolvingAndAccountability.map((item) => (
+                  {qualifications.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
-              </div>
-            </div>
-
-            <h3 className="mt-8 text-xl font-semibold text-slate-900">Qualifications</h3>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700">
-              {qualifications.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+              </>
+            )}
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               {job.application?.applyUrl ? (
